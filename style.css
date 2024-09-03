@@ -1,0 +1,204 @@
+@import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;700&display=swap');
+
+:root{
+    --Lime: hsl(61, 70%, 52%);
+    --Red: hsl(4, 69%, 50%);
+    --White: hsl(0, 0%, 100%);
+    --Slate-100: hsl(202, 86%, 94%);
+    --Slate-300: hsl(203, 41%, 72%);
+    --Slate-500: hsl(200, 26%, 54%);
+    --Slate-700: hsl(200, 24%, 40%);
+    --Slate-900: hsl(202, 55%, 16%);
+    --Family-Plus-Jakarta-Sans: 'Plus Jakarta Sans', sans-serif;
+}
+*{
+    box-sizing: border-box;
+    margin:0;
+    padding:0;
+}
+body{
+    background-color:var(--Slate-100);
+    font-family: var(--Family-Plus-Jakarta-Sans);
+}
+.Mortgage-box {
+    display: flex;
+    background-color:var(--White);
+    margin: 150px 0px;
+    border-radius:30px;
+}
+.mortgage-calculator{
+    padding: 30px;
+}
+.heading{
+    display:flex;
+    justify-content: space-between;
+    font-family: var(--Family-Plus-Jakarta-Sans);
+}
+.heading h3{
+    font-weight:700;
+}
+.heading a{
+    font-size:18px;
+    color:var(--Slate-500);
+    font-weight:700;
+}
+.input-container {
+    position: relative;
+    display: flex;
+    align-items: center;
+}
+
+.input-amount {
+    padding-left: 3.5rem; /* Add padding to make space for the icon */
+    border-top-left-radius: 4px;
+    border-bottom-left-radius: 4px;
+    padding-bottom:10px;
+    background-color: var(--White);
+}
+
+.input-container i {
+    position: absolute;
+    left: 0px; /* Adjust the position to fit your design */
+    color: var(--Slate-900);
+    background-color: var(--Slate-100);
+    padding: 15px;
+    border-top-left-radius: 4px;
+    border-bottom-left-radius: 4px;
+    height: 100%; /* Ensure it matches the height of the input */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 1;
+}
+
+.form-control:focus,.form-control:active{
+    box-shadow:none;
+    border:2px solid var(--Slate-500);
+    background-color:var(--White);
+}
+.input-container:focus-within input{
+    box-shadow:none;
+    border:3px solid var(--Lime);
+}
+.input-container:focus-within i {
+    background-color: var(--Lime);
+    border:3px solid var(--Lime);
+}
+.form-check-input:focus,.form-check-input:checked{
+    box-shadow:none;
+    background-color:var(--Lime);
+    outline:2px solid var(--Lime);
+    border:2px solid var(--Lime);
+}
+.form-check:has(input:checked) {
+    border-color: var(--Lime);
+    background-color: #fff9e7;
+}
+.years-container{
+    position:relative;
+}
+.years-container span{
+    position: absolute;
+    right: 0px;
+    text-align: center;
+    padding: 7px 22px 7px 22px;
+    border-top-left-radius: 4px;
+    border-bottom-left-radius: 4px;
+    font-size: 16px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--Slate-900);
+    background-color: var(--Slate-100);
+}
+.form-check{
+    border: 2px solid #dee2e6;;
+    padding: 7px;
+    border-radius:5px;
+}
+.form-check-input{
+    margin-left:0px;
+}
+.form-check-label{
+    margin-left:10px;
+}
+button{
+    background-color: var(--Lime);
+    border-radius: 25px;
+    padding: 10px 29px;
+    border: none;
+    margin-top:30px;
+    font-weight:700;
+}
+button img{
+    margin-right:10px;
+}
+.results-box{
+    border-bottom-left-radius: 100px;
+    background-color:var(--Slate-900);
+    color:var(--White);
+}
+.results-image p{
+    text-align:center;
+    font-size: 15px;
+    padding: 0px 31px;
+    margin-top: 10px;
+    color: rgb(176 180 185);
+    font-weight: 400;
+}
+.results-box .results-image{
+    margin-top:120px;
+}
+.results-declared{
+    padding: 0px 20px;
+}
+.results-declared p{
+    font-size:15px;
+    color: rgb(176 180 185);
+}
+.label-color{
+    color:rgb(75, 106, 149);
+    font-weight:600;
+}
+.results-number{
+    height: 274px;
+    width: 370px;
+    background-color: #0E2431;
+    border-radius: 10px;
+    border-top: 5px solid #D6D932;
+    padding: 30px;
+}
+hr{
+    margin:32px 0px;
+}
+.result{
+    color:var(--Lime);
+}
+.error{
+    color:red;
+}
+@media(max-width:375px){
+    .Mortgage-box {
+        margin: 0px 0px;
+        border-radius:0px;
+    }
+    .heading{
+        flex-direction:column;
+    }
+    .results-box{
+        border-bottom-left-radius: 0px;
+    }
+    .attribution{
+        flex-direction:column;
+    }
+    .col-lg-10{
+        padding:0px;
+    }
+    .results-number{
+        width:auto;
+    }
+    .results-declared{
+        margin-bottom:30px;
+    }
+}
+
